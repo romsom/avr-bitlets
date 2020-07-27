@@ -1,5 +1,3 @@
-* Jam Multi Clock
-This hardware project is about a device which let's you sync different pieces of synth hardware, like e.g., Teenage Engineering Pocket Operators, MIDI devices like the Mutable Instruments Shruthi-1 and the Arturia Beat Step Pro.
-
-* Implementation
-The first step will just be to implement clock conversion from the Beatstep Pro to the Pocket Operator (and possibly back).
+* AVR bitlets
+This is a repo full of small specialized projects for Atmel/Microchip AVR micro controllers.
+They will mostly be bare metal but some Arduino project might sneak in.
