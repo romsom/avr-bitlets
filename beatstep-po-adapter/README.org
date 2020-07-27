@@ -17,6 +17,11 @@
 	 - when I configure the PRESCALER, so that I get short enough pulses (8), there is not enough time until the first ovf interrupt hits (after the one when the Counter wraps from MAX to BOTTOM, which is it's own problem)
 	 - the workaround for the additional ovf interrupt is also the solution to the delay being to short, because we can just add another counter and use that to mask resetting the state machine for n cycles
 	 - it's not as nice and clean a solution though
+   - to debug this I would have to
+	 - either get hold of a debugger, or
+	 - add a serial connection, to be able to printf-debug
+	 - single step the counter using an external source and toggling the GPIO
+	 - read and print the counter value after each step
 ** Feature Ideas
    - runtime configurable divider for polyrhythms
    - midi
