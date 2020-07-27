@@ -1,19 +1,22 @@
-#define F_CPU 8000000UL
+#define F_CPU 10000000UL
 #define DIVIDE 2
 
 // define pulse length
 #define PULSE_LENGTH_MS 20
 //#define OUT_PORT PORTB
 #define OUT_PIN_PB PB1 // also OC1A
-//#define PRESCALER ((1<<CS10) | (1<<CS12)) // 1024
-//#define PRESCALER ((1<<CS10) | (1<<CS11)) // 64
+/* #define PRESCALER ((1<<CS10) | (1<<CS12)) // 1024 */
+/* #define PRESCALER ((1<<CS10) | (1<<CS11)) // 64 */
+/* #define PRESCALER ((1<<CS10)) // 1 */
 #define PRESCALER ((1<<CS11)) // 8
-#define TIMER_TICKS ((uint8_t)(PULSE_LENGTH_MS * (F_CPU / 1000) / 1024))
-#define TIMER_MAX 0xffff
+#define TIMER_TICKS ((uint16_t)((uint32_t)PULSE_LENGTH_MS * (F_CPU / 1000) / 1024))
+#define TIMER_MAX ((uint16_t)0xffff)
 #define TIMER_MATCH (TIMER_MAX - TIMER_TICKS) // this is the value of the compare register, the period will be from compare match to ovf
 #define TIMER_START (TIMER_MATCH - 1) // set TCNT1 to this
 #define TIMER_TOP (TIMER_START - 1) // set ICR1 to this
+/* #define TIMER_TOP 0xffff */
 
+#define RESET_AFTER_N_CYCLES 10
 
 #define DEBUG
 
@@ -22,24 +25,32 @@
 #include <avr/interrupt.h>
 //#include <avr/timer.h>
 
+#ifdef DEBUG
+uint16_t timer_match = TIMER_MATCH;
+uint16_t timer_ticks = TIMER_TICKS;
+uint16_t timer_top = TIMER_TOP;
+#endif // DEBUG
+
 static inline __attribute__((always_inline)) void trigger_output_pulse(void) {
 	// TODO
 	// start timer
 	TCNT1 = TIMER_START;
 }
 
+static uint8_t count = 0; // divider counter
+static uint8_t pulse_in_progress = 0;
 ISR(INT0_vect) {
-	static uint8_t count = 0;
 	if (count == 0) {
 #ifdef DEBUG
-	static uint8_t pin_on = 0;
-	if (pin_on)
-		PORTC &= ~(1<<PC0);
-	else
-		PORTC |= (1<<PC0);
-	pin_on = ~pin_on;
+		static uint8_t pin_on = 0;
+		if (pin_on)
+			PORTC &= ~(1<<PC0);
+		else
+			PORTC |= (1<<PC0);
+		pin_on = ~pin_on;
 #endif // DEBUG
 		// set out pin hi
+		pulse_in_progress = RESET_AFTER_N_CYCLES;
 		trigger_output_pulse();
 	}
 	count = (count + 1) % DIVIDE;
@@ -64,6 +75,14 @@ ISR(TIMER1_OVF_vect) {
 	else
 		PORTC |= (1<<PC3);
 	pin_on = ~pin_on;
+	// reset divider counter on overflow to reset state, when no clock is present
+	// but as the wraparound at MAX also causes this interrupt to fire, only do this,
+	// when there is no pulse in progress
+	if (pulse_in_progress > 0) {
+		pulse_in_progress--;
+	} else {
+		count = 0;
+	}
 }
 #endif // DEBUG
 
