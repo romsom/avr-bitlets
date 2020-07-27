@@ -1,0 +1,22 @@
+* Clock divider for Beatstep Pro and Pocket Operators
+** Idea
+   - the clock signal triggers EXT_INT0
+   - a counter gets incremented
+   - the first of every n turns a short pulse is generated using TIMER1 compare channel A
+	 - the ATMega8's timers are not built to support one-shots
+	 - but there is a way on some ATMEGAs using a certain FastPWM mode
+	 - in this mode there has to be the possibility to set MATCH higher than TOP, so that the timer will wrap around before hitting match
+	 - to start the one-shot we write a value that is higher than TOP but lower than MATCH (usually MATCH - 1) into the counter
+	 - the output mode is configured in inverse PWM mode, so hitting MATCH sets the pin, wrapping around and hitting BOTTOM will clear the pin
+   - TIMER1 in Mode 14 seems to allow this by setting TOP in ICR1 and MATCH in OCR1A or OCR1B
+	 - but the behaviour seems very strange:
+	 - when I set MATCH lower than TOP, I get very short pulses as I expect
+	 - when I set MATCH higher than TOP and only trigger a rise above TOP manually, the pulses get orders of magnitude longer, about as long as the lower part of the counter, as if the counter would count downward
+   - I can workaround this problem by adjusting the Timer's PRESCALER
+   - the problem is, that I would like to use the TIMER OVF interrupt to reset the division state machine, so that the divider starts in phase after the input clock was disconnected
+	 - when I configure the PRESCALER, so that I get short enough pulses (8), there is not enough time until the first ovf interrupt hits (after the one when the Counter wraps from MAX to BOTTOM, which is it's own problem)
+	 - the workaround for the additional ovf interrupt is also the solution to the delay being to short, because we can just add another counter and use that to mask resetting the state machine for n cycles
+	 - it's not as nice and clean a solution though
+** Feature Ideas
+   - runtime configurable divider for polyrhythms
+   - midi
