@@ -9,3 +9,6 @@
 *.pyc
 # build directories
 */build
+# KiCAD
+*.sch-bak
+_autosave-*.sch
