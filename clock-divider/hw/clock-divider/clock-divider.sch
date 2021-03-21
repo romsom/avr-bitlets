@@ -361,50 +361,6 @@ Wire Wire Line
 	4550 1500 4400 1500
 Connection ~ 4400 1500
 $Comp
-L Display_Character:HDSP-7803 U?
-U 1 1 60601416
-P 8550 2100
-F 0 "U?" H 8550 2767 50  0000 C CNN
-F 1 "Left" H 8550 2676 50  0000 C CNN
-F 2 "Display_7Segment:HDSP-7801" H 8550 1550 50  0001 C CNN
-F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 8550 2100 50  0001 C CNN
-	1    8550 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Display_Character:HDSP-7803 U?
-U 1 1 60603731
-P 9650 2100
-F 0 "U?" H 9650 2767 50  0000 C CNN
-F 1 "Right" H 9650 2676 50  0000 C CNN
-F 2 "Display_7Segment:HDSP-7801" H 9650 1550 50  0001 C CNN
-F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 9650 2100 50  0001 C CNN
-	1    9650 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:BC548 Q?
-U 1 1 60604B60
-P 8750 3450
-F 0 "Q?" H 8941 3496 50  0000 L CNN
-F 1 "BC548" H 8941 3405 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8950 3375 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 8750 3450 50  0001 L CNN
-	1    8750 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:BC548 Q?
-U 1 1 60605442
-P 9850 3450
-F 0 "Q?" H 10041 3496 50  0000 L CNN
-F 1 "BC548" H 10041 3405 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10050 3375 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 9850 3450 50  0001 L CNN
-	1    9850 3450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R_POT RV?
 U 1 1 6062D6F5
 P 8550 4600
@@ -485,14 +441,6 @@ Text Label 8350 5650 2    50   ~ 0
 act_in
 Text Label 9400 5650 2    50   ~ 0
 act_out
-Wire Wire Line
-	8850 2400 8850 2500
-Connection ~ 8850 2500
-Wire Wire Line
-	9950 3250 9950 2500
-Connection ~ 9950 2500
-Wire Wire Line
-	9950 2500 9950 2400
 Text Label 9350 1800 2    50   ~ 0
 7seg_a
 Text Label 9350 1900 2    50   ~ 0
@@ -762,22 +710,8 @@ F 3 "" H 10800 5650 50  0001 C CNN
 $EndComp
 Text Label 10400 5650 2    50   ~ 0
 disp_next_seq
-$Comp
-L power:GND #PWR?
-U 1 1 6078B251
-P 8850 3800
-F 0 "#PWR?" H 8850 3550 50  0001 C CNN
-F 1 "GND" H 8855 3627 50  0000 C CNN
-F 2 "" H 8850 3800 50  0001 C CNN
-F 3 "" H 8850 3800 50  0001 C CNN
-	1    8850 3800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9950 3650 8850 3650
-Wire Wire Line
-	8850 3650 8850 3800
-Connection ~ 8850 3650
 $Comp
 L Device:R R?
 U 1 1 60797063
@@ -916,8 +850,6 @@ F 3 "~" H 4700 1500 50  0001 C CNN
 	1    4700 1500
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	8850 2500 8850 3250
 Text Label 9650 3450 2    50   ~ 0
 7seg_sel_right
 $Comp
@@ -1085,4 +1017,72 @@ $EndComp
 NoConn ~ 1150 2050
 NoConn ~ 1150 1100
 NoConn ~ 1150 1200
+$Comp
+L Display_Character:HDSP-7801 U?
+U 1 1 60924FDA
+P 9650 2100
+F 0 "U?" H 9650 2767 50  0000 C CNN
+F 1 "HDSP-7801" H 9650 2676 50  0000 C CNN
+F 2 "Display_7Segment:HDSP-7801" H 9650 1550 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 9650 2100 50  0001 C CNN
+	1    9650 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 2500 9950 3250
+Wire Wire Line
+	9950 2400 9950 2500
+Connection ~ 9950 2500
+$Comp
+L Display_Character:HDSP-7801 U?
+U 1 1 6092EEE8
+P 8550 2100
+F 0 "U?" H 8550 2767 50  0000 C CNN
+F 1 "HDSP-7801" H 8550 2676 50  0000 C CNN
+F 2 "Display_7Segment:HDSP-7801" H 8550 1550 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 8550 2100 50  0001 C CNN
+	1    8550 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2500 8850 3250
+Wire Wire Line
+	8850 2400 8850 2500
+Connection ~ 8850 2500
+$Comp
+L Transistor_BJT:BC557 Q?
+U 1 1 60932F7D
+P 8750 3450
+F 0 "Q?" H 8941 3496 50  0000 L CNN
+F 1 "BC557" H 8941 3405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8950 3375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 8750 3450 50  0001 L CNN
+	1    8750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC557 Q?
+U 1 1 60933AFE
+P 9850 3450
+F 0 "Q?" H 10041 3496 50  0000 L CNN
+F 1 "BC557" H 10041 3405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10050 3375 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 9850 3450 50  0001 L CNN
+	1    9850 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60935CE1
+P 10450 3650
+F 0 "#PWR?" H 10450 3500 50  0001 C CNN
+F 1 "+5V" H 10465 3823 50  0000 C CNN
+F 2 "" H 10450 3650 50  0001 C CNN
+F 3 "" H 10450 3650 50  0001 C CNN
+	1    10450 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 3650 10450 3650
+Connection ~ 9950 3650
 $EndSCHEMATC
