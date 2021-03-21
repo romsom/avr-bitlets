@@ -78,17 +78,6 @@ Connection ~ 6450 2100
 Wire Wire Line
 	6450 2100 6450 2000
 $Comp
-L Regulator_Linear:L78L05_SO8 U?
-U 1 1 6056B8C9
-P 1950 1950
-F 0 "U?" H 1950 2192 50  0000 C CNN
-F 1 "L78L05_SO8" H 1950 2101 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2050 2150 50  0001 C CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 2150 1950 50  0001 C CNN
-	1    1950 1950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:D D?
 U 1 1 6056E5D4
 P 1950 1500
@@ -97,17 +86,6 @@ F 1 "1N4148" H 1950 1626 50  0000 C CNN
 F 2 "" H 1950 1500 50  0001 C CNN
 F 3 "~" H 1950 1500 50  0001 C CNN
 	1    1950 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Jack-DC J?
-U 1 1 6056F0AD
-P 850 2050
-F 0 "J?" H 907 2375 50  0000 C CNN
-F 1 "Jack-DC" H 907 2284 50  0000 C CNN
-F 2 "" H 900 2010 50  0001 C CNN
-F 3 "~" H 900 2010 50  0001 C CNN
-	1    850  2050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -159,7 +137,7 @@ L Connector:USB_B J?
 U 1 1 60578D00
 P 850 1100
 F 0 "J?" H 907 1567 50  0000 C CNN
-F 1 "USB_B" H 907 1476 50  0000 C CNN
+F 1 "USB power" H 907 1476 50  0000 C CNN
 F 2 "" H 1000 1050 50  0001 C CNN
 F 3 " ~" H 1000 1050 50  0001 C CNN
 	1    850  1100
@@ -548,7 +526,7 @@ L Connector:AVR-ISP-6 J?
 U 1 1 606AB5E4
 P 1600 3650
 F 0 "J?" H 1271 3746 50  0000 R CNN
-F 1 "AVR-ISP-6" H 1271 3655 50  0000 R CNN
+F 1 "ISP" H 1271 3655 50  0000 R CNN
 F 2 "" V 1350 3700 50  0001 C CNN
 F 3 " ~" H 325 3100 50  0001 C CNN
 	1    1600 3650
@@ -932,7 +910,7 @@ L Device:R R?
 U 1 1 6081681A
 P 4700 1500
 F 0 "R?" V 4600 1500 50  0000 C CNN
-F 1 "150" V 4700 1500 50  0000 C CNN
+F 1 "330" V 4700 1500 50  0000 C CNN
 F 2 "" V 4630 1500 50  0001 C CNN
 F 3 "~" H 4700 1500 50  0001 C CNN
 	1    4700 1500
@@ -1082,4 +1060,29 @@ F 3 "" H 6250 4200 50  0001 C CNN
 	1    6250 4200
 	1    0    0    -1  
 $EndComp
+$Comp
+L Regulator_Linear:L78L05_TO92 U?
+U 1 1 608E6899
+P 1950 1950
+F 0 "U?" H 1950 2192 50  0000 C CNN
+F 1 "L78L05_TO92" H 1950 2101 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1950 2175 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 1950 1900 50  0001 C CNN
+	1    1950 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Barrel_Jack_Switch J?
+U 1 1 608F218A
+P 850 2050
+F 0 "J?" H 907 2367 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 907 2276 50  0000 C CNN
+F 2 "" H 900 2010 50  0001 C CNN
+F 3 "~" H 900 2010 50  0001 C CNN
+	1    850  2050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1150 2050
+NoConn ~ 1150 1100
+NoConn ~ 1150 1200
 $EndSCHEMATC
