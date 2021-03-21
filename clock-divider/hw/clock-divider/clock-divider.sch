@@ -1018,38 +1018,6 @@ NoConn ~ 1150 2050
 NoConn ~ 1150 1100
 NoConn ~ 1150 1200
 $Comp
-L Display_Character:HDSP-7801 U?
-U 1 1 60924FDA
-P 9650 2100
-F 0 "U?" H 9650 2767 50  0000 C CNN
-F 1 "HDSP-7801" H 9650 2676 50  0000 C CNN
-F 2 "Display_7Segment:HDSP-7801" H 9650 1550 50  0001 C CNN
-F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 9650 2100 50  0001 C CNN
-	1    9650 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9950 2500 9950 3250
-Wire Wire Line
-	9950 2400 9950 2500
-Connection ~ 9950 2500
-$Comp
-L Display_Character:HDSP-7801 U?
-U 1 1 6092EEE8
-P 8550 2100
-F 0 "U?" H 8550 2767 50  0000 C CNN
-F 1 "HDSP-7801" H 8550 2676 50  0000 C CNN
-F 2 "Display_7Segment:HDSP-7801" H 8550 1550 50  0001 C CNN
-F 3 "https://docs.broadcom.com/docs/AV02-2553EN" H 8550 2100 50  0001 C CNN
-	1    8550 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8850 2500 8850 3250
-Wire Wire Line
-	8850 2400 8850 2500
-Connection ~ 8850 2500
-$Comp
 L Transistor_BJT:BC557 Q?
 U 1 1 60932F7D
 P 8750 3450
@@ -1085,4 +1053,36 @@ $EndComp
 Wire Wire Line
 	9950 3650 10450 3650
 Connection ~ 9950 3650
+$Comp
+L special-parts:SA52-11EWA U?
+U 1 1 6096ED5D
+P 9650 2100
+F 0 "U?" H 9650 2767 50  0000 C CNN
+F 1 "SA52-11EWA" H 9650 2676 50  0000 C CNN
+F 2 "Display_7Segment:Sx52-1xxxxx" H 9650 1550 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/sa52-11ewa.pdf" H 9650 2100 50  0001 C CNN
+	1    9650 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 2500 9950 3250
+Wire Wire Line
+	9950 2400 9950 2500
+Connection ~ 9950 2500
+$Comp
+L special-parts:SA52-11EWA U?
+U 1 1 6097A638
+P 8550 2100
+F 0 "U?" H 8550 2767 50  0000 C CNN
+F 1 "SA52-11EWA" H 8550 2676 50  0000 C CNN
+F 2 "Display_7Segment:Sx52-1xxxxx" H 8550 1550 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/sa52-11ewa.pdf" H 8550 2100 50  0001 C CNN
+	1    8550 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2500 8850 3250
+Wire Wire Line
+	8850 2400 8850 2500
+Connection ~ 8850 2500
 $EndSCHEMATC

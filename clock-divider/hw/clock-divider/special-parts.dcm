@@ -1,0 +1,27 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SA52-11EWA
+D Single digit 7 segment display, high efficiency red, common anode
+K display LED 7-segment
+F http://www.kingbrightusa.com/images/catalog/SPEC/sa52-11ewa.pdf
+$ENDCMP
+#
+$CMP SA52-11GWA
+D Single digit 7 segment display, green, common anode
+K display LED 7-segment
+F http://www.kingbrightusa.com/images/catalog/SPEC/sa52-11gwa.pdf
+$ENDCMP
+#
+$CMP SA52-11SRWA
+D Single digit 7 segment display, super bright red, common anode
+K display LED 7-segment
+F http://www.kingbrightusa.com/images/catalog/SPEC/sa52-11srwa.pdf
+$ENDCMP
+#
+$CMP SA52-11YWA
+D Single digit 7 segment display, yellow, common anode
+K display LED 7-segment
+F http://www.kingbrightusa.com/images/catalog/SPEC/sa52-11ywa.pdf
+$ENDCMP
+#
+#End Doc Library
