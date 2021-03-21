@@ -24,4 +24,18 @@
 	 - read and print the counter value after each step
 ** Feature Ideas
    - runtime configurable divider for polyrhythms
-   - midi
+   - division sequences/cycles
+     - synchronous switch with clock signal
+     - second input will be polled periodically and a flag will be set
+     - in ISR the second input will be polled again
+     - if the input is high or the flag is set
+       - the flag will be reset (interrupt prio > background prio)
+       - the next division ratio will be active
+     - data structure
+       - I want a structure that allows appending of values at the end and removal of any element without moving data
+       - have a partially filled array with a marker to the next free index
+       - appending will put the element there and advance the index counter
+       - removing of an element will either
+	 - mark the element as invalid if it's not the last element
+	 - decrement the index counter until it's either 0 or (counter-1) points to a valid element if the element removed was the last element
+       - compact the data when saving the structure to eeprom or copying to another location
