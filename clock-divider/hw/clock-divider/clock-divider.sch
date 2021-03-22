@@ -25,28 +25,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2486-8-bit-avr-microc
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack3 J6
-U 1 1 60561A84
-P 6650 3500
-F 0 "J6" H 6370 3433 50  0000 R CNN
-F 1 "Input" H 6370 3524 50  0000 R CNN
-F 2 "" H 6650 3500 50  0001 C CNN
-F 3 "~" H 6650 3500 50  0001 C CNN
-	1    6650 3500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:AudioJack3 J5
-U 1 1 6056207B
-P 6650 2000
-F 0 "J5" H 6370 1933 50  0000 R CNN
-F 1 "Output" H 6370 2024 50  0000 R CNN
-F 2 "" H 6650 2000 50  0001 C CNN
-F 3 "~" H 6650 2000 50  0001 C CNN
-	1    6650 2000
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R15
 U 1 1 60565DEB
 P 6200 1900
@@ -57,8 +35,6 @@ F 3 "~" H 6200 1900 50  0001 C CNN
 	1    6200 1900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6350 1900 6450 1900
 $Comp
 L power:GND #PWR020
 U 1 1 605694AC
@@ -270,24 +246,6 @@ F 3 "~" H 6200 3400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6050 3400 5950 3400
-Wire Wire Line
-	6450 3400 6350 3400
-$Comp
-L power:GND #PWR021
-U 1 1 605DA853
-P 6450 3750
-F 0 "#PWR021" H 6450 3500 50  0001 C CNN
-F 1 "GND" H 6455 3577 50  0000 C CNN
-F 2 "" H 6450 3750 50  0001 C CNN
-F 3 "" H 6450 3750 50  0001 C CNN
-	1    6450 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6450 3750 6450 3600
-Connection ~ 6450 3600
-Wire Wire Line
-	6450 3600 6450 3500
 Wire Wire Line
 	1950 2250 1950 2500
 Connection ~ 1950 2500
@@ -617,33 +575,6 @@ Text Label 8550 3450 2    50   ~ 0
 7seg_sel_left
 Text Label 5550 2200 0    50   ~ 0
 7seg_sel_left
-$Comp
-L Connector:AudioJack3 J7
-U 1 1 6074DC5A
-P 6650 4750
-F 0 "J7" H 6370 4683 50  0000 R CNN
-F 1 "Trigger Next Seq" H 6370 4774 50  0000 R CNN
-F 2 "" H 6650 4750 50  0001 C CNN
-F 3 "~" H 6650 4750 50  0001 C CNN
-	1    6650 4750
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR022
-U 1 1 607503C1
-P 6450 4950
-F 0 "#PWR022" H 6450 4700 50  0001 C CNN
-F 1 "GND" H 6455 4777 50  0000 C CNN
-F 2 "" H 6450 4950 50  0001 C CNN
-F 3 "" H 6450 4950 50  0001 C CNN
-	1    6450 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6450 4750 6450 4850
-Connection ~ 6450 4850
-Wire Wire Line
-	6450 4850 6450 4950
 Text Label 5850 4850 2    50   ~ 0
 trig_next_seq
 $Comp
@@ -1034,8 +965,6 @@ Connection ~ 8850 2500
 Wire Wire Line
 	5950 4850 5950 4650
 Wire Wire Line
-	6350 4650 6450 4650
-Wire Wire Line
 	6050 4650 5950 4650
 Wire Wire Line
 	5950 3400 5950 3900
@@ -1095,4 +1024,140 @@ Wire Wire Line
 	2350 3550 2650 3550
 Wire Wire Line
 	2000 3750 2650 3750
+Wire Wire Line
+	6450 2000 6450 2250
+Wire Wire Line
+	6750 1800 6650 1800
+Wire Wire Line
+	6650 1800 6650 2000
+Wire Wire Line
+	6650 2000 6750 2000
+Wire Wire Line
+	6350 1900 6750 1900
+Wire Wire Line
+	6450 2000 6650 2000
+Connection ~ 6650 2000
+Wire Wire Line
+	6650 2000 6650 2100
+Wire Wire Line
+	6750 2100 6650 2100
+Connection ~ 6650 2100
+Wire Wire Line
+	6650 2100 6650 2200
+Wire Wire Line
+	6650 2200 6750 2200
+Wire Wire Line
+	6750 3300 6650 3300
+Wire Wire Line
+	6650 3300 6650 3500
+Wire Wire Line
+	6650 3500 6750 3500
+Wire Wire Line
+	6350 3400 6750 3400
+Wire Wire Line
+	6450 3500 6650 3500
+Connection ~ 6650 3500
+Wire Wire Line
+	6650 3500 6650 3600
+Wire Wire Line
+	6750 3600 6650 3600
+Connection ~ 6650 3600
+Wire Wire Line
+	6650 3600 6650 3700
+Wire Wire Line
+	6650 3700 6750 3700
+$Comp
+L power:GND #PWR021
+U 1 1 60C16BDF
+P 6450 3750
+F 0 "#PWR021" H 6450 3500 50  0001 C CNN
+F 1 "GND" H 6455 3577 50  0000 C CNN
+F 2 "" H 6450 3750 50  0001 C CNN
+F 3 "" H 6450 3750 50  0001 C CNN
+	1    6450 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3500 6450 3750
+Wire Wire Line
+	6750 4550 6650 4550
+Wire Wire Line
+	6650 4550 6650 4750
+Wire Wire Line
+	6650 4750 6750 4750
+Wire Wire Line
+	6350 4650 6750 4650
+Wire Wire Line
+	6450 4750 6650 4750
+Connection ~ 6650 4750
+Wire Wire Line
+	6650 4750 6650 4850
+Wire Wire Line
+	6750 4850 6650 4850
+Connection ~ 6650 4850
+Wire Wire Line
+	6650 4850 6650 4950
+Wire Wire Line
+	6650 4950 6750 4950
+$Comp
+L power:GND #PWR022
+U 1 1 60C30F65
+P 6450 5000
+F 0 "#PWR022" H 6450 4750 50  0001 C CNN
+F 1 "GND" H 6455 4827 50  0000 C CNN
+F 2 "" H 6450 5000 50  0001 C CNN
+F 3 "" H 6450 5000 50  0001 C CNN
+	1    6450 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 4750 6450 5000
+Connection ~ 6650 4950
+Wire Wire Line
+	6650 4950 6650 5050
+Wire Wire Line
+	6650 5050 6750 5050
+Connection ~ 6650 3700
+Wire Wire Line
+	6650 3700 6650 3800
+Wire Wire Line
+	6650 3800 6750 3800
+Connection ~ 6650 2200
+Wire Wire Line
+	6650 2200 6650 2300
+Wire Wire Line
+	6650 2300 6750 2300
+$Comp
+L Connector:AudioJack4_SwitchTR1 J?
+U 1 1 60CA922E
+P 6950 2100
+F 0 "J?" H 6570 1983 50  0000 R CNN
+F 1 "Output" H 6570 2074 50  0000 R CNN
+F 2 "" H 6900 2100 50  0001 C CNN
+F 3 "~" H 6900 2100 50  0001 C CNN
+	1    6950 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack4_SwitchTR1 J?
+U 1 1 60CBA4F6
+P 6950 3600
+F 0 "J?" H 6570 3483 50  0000 R CNN
+F 1 "Input" H 6570 3574 50  0000 R CNN
+F 2 "" H 6900 3600 50  0001 C CNN
+F 3 "~" H 6900 3600 50  0001 C CNN
+	1    6950 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack4_SwitchTR1 J?
+U 1 1 60CC0409
+P 6950 4850
+F 0 "J?" H 6570 4733 50  0000 R CNN
+F 1 "Trigger Next Seq" H 6570 4824 50  0000 R CNN
+F 2 "" H 6900 4850 50  0001 C CNN
+F 3 "~" H 6900 4850 50  0001 C CNN
+	1    6950 4850
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
