@@ -1128,10 +1128,10 @@ Wire Wire Line
 Wire Wire Line
 	6650 2300 6750 2300
 $Comp
-L Connector:AudioJack4_SwitchTR1 J?
+L Connector:AudioJack4_SwitchTR1 J5
 U 1 1 60CA922E
 P 6950 2100
-F 0 "J?" H 6570 1983 50  0000 R CNN
+F 0 "J5" H 6570 1983 50  0000 R CNN
 F 1 "Output" H 6570 2074 50  0000 R CNN
 F 2 "" H 6900 2100 50  0001 C CNN
 F 3 "~" H 6900 2100 50  0001 C CNN
@@ -1139,10 +1139,10 @@ F 3 "~" H 6900 2100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:AudioJack4_SwitchTR1 J?
+L Connector:AudioJack4_SwitchTR1 J6
 U 1 1 60CBA4F6
 P 6950 3600
-F 0 "J?" H 6570 3483 50  0000 R CNN
+F 0 "J6" H 6570 3483 50  0000 R CNN
 F 1 "Input" H 6570 3574 50  0000 R CNN
 F 2 "" H 6900 3600 50  0001 C CNN
 F 3 "~" H 6900 3600 50  0001 C CNN
@@ -1150,10 +1150,10 @@ F 3 "~" H 6900 3600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:AudioJack4_SwitchTR1 J?
+L Connector:AudioJack4_SwitchTR1 J7
 U 1 1 60CC0409
 P 6950 4850
-F 0 "J?" H 6570 4733 50  0000 R CNN
+F 0 "J7" H 6570 4733 50  0000 R CNN
 F 1 "Trigger Next Seq" H 6570 4824 50  0000 R CNN
 F 2 "" H 6900 4850 50  0001 C CNN
 F 3 "~" H 6900 4850 50  0001 C CNN
