@@ -875,7 +875,7 @@ U 1 1 608E6899
 P 1950 1950
 F 0 "U1" H 1950 2192 50  0000 C CNN
 F 1 "L78L05_TO92" H 1950 2101 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1950 2175 50  0001 C CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 1950 2175 50  0001 C CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 1950 1900 50  0001 C CNN
 	1    1950 1950
 	1    0    0    -1  
@@ -900,7 +900,7 @@ U 1 1 60932F7D
 P 8750 3450
 F 0 "Q1" H 8941 3496 50  0000 L CNN
 F 1 "BC557" H 8941 3405 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8950 3375 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 8950 3375 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 8750 3450 50  0001 L CNN
 	1    8750 3450
 	1    0    0    -1  
@@ -911,7 +911,7 @@ U 1 1 60933AFE
 P 9850 3450
 F 0 "Q2" H 10041 3496 50  0000 L CNN
 F 1 "BC557" H 10041 3405 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10050 3375 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 10050 3375 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/BC556BTA-D.pdf" H 9850 3450 50  0001 L CNN
 	1    9850 3450
 	1    0    0    -1  
@@ -1133,7 +1133,7 @@ U 1 1 60CA922E
 P 6950 2100
 F 0 "J5" H 6570 1983 50  0000 R CNN
 F 1 "Output" H 6570 2074 50  0000 R CNN
-F 2 "" H 6900 2100 50  0001 C CNN
+F 2 "special-parts:Jack_3.5mm_CUI_SJ-43516-SMT_Horizontal" H 6900 2100 50  0001 C CNN
 F 3 "~" H 6900 2100 50  0001 C CNN
 	1    6950 2100
 	-1   0    0    1   
@@ -1144,7 +1144,7 @@ U 1 1 60CBA4F6
 P 6950 3600
 F 0 "J6" H 6570 3483 50  0000 R CNN
 F 1 "Input" H 6570 3574 50  0000 R CNN
-F 2 "" H 6900 3600 50  0001 C CNN
+F 2 "special-parts:Jack_3.5mm_CUI_SJ-43516-SMT_Horizontal" H 6900 3600 50  0001 C CNN
 F 3 "~" H 6900 3600 50  0001 C CNN
 	1    6950 3600
 	-1   0    0    1   
@@ -1155,7 +1155,7 @@ U 1 1 60CC0409
 P 6950 4850
 F 0 "J7" H 6570 4733 50  0000 R CNN
 F 1 "Trigger Next Seq" H 6570 4824 50  0000 R CNN
-F 2 "" H 6900 4850 50  0001 C CNN
+F 2 "special-parts:Jack_3.5mm_CUI_SJ-43516-SMT_Horizontal" H 6900 4850 50  0001 C CNN
 F 3 "~" H 6900 4850 50  0001 C CNN
 	1    6950 4850
 	-1   0    0    1   
