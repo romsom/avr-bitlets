@@ -1,4 +1,4 @@
-18807900226615726
+18809516937895726
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -81766,6 +81766,13 @@ varistor SIOV
 0
 2
 2
+special-parts
+Jack_3.5mm_CUI_SJ-43516-SMT_Horizontal
+3.5 mm, Stereo, Headset, Microphone, Right Angle, Surface Mount (SMT), Audio Jack Connector (https://www.cuidevices.com/product/resource/sj_4351x_smt.pdf)
+3.5mm audio cui horizontal jack stereo headset microphone
+0
+6
+6
 special-parts
 Sx52-1xxxxx
 Single digit 7 segment LED display in red, yellow or green colour http://www.kingbrightusa.com/images/catalog/SPEC/sa52-11ewa.pdf
